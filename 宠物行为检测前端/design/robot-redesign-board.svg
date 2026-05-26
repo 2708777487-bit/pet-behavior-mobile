@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f7f1e8"/>
+      <stop offset="100%" stop-color="#eaf1ed"/>
+    </linearGradient>
+    <linearGradient id="shell" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="45%" stop-color="#f1efec"/>
+      <stop offset="100%" stop-color="#d9d6d2"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f8f8f8"/>
+      <stop offset="50%" stop-color="#b9bdc2"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+    <linearGradient id="track" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f4f4f2"/>
+      <stop offset="65%" stop-color="#9ea3a9"/>
+      <stop offset="100%" stop-color="#2d3035"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#6f5638" flood-opacity="0.22"/>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#d9d0c4" stroke-width="1"/>
+    </pattern>
+    <style>
+      .title{font:700 46px 'Microsoft YaHei',Arial,sans-serif;fill:#2f2924}
+      .subtitle{font:400 20px 'Microsoft YaHei',Arial,sans-serif;fill:#756858}
+      .label{font:700 19px 'Microsoft YaHei',Arial,sans-serif;fill:#3b342d}
+      .note{font:400 15px 'Microsoft YaHei',Arial,sans-serif;fill:#7b6c5b}
+      .view-title{font:700 26px 'Microsoft YaHei',Arial,sans-serif;fill:#a96f32}
+      .small{font:400 13px 'Microsoft YaHei',Arial,sans-serif;fill:#867564}
+      .callout{fill:none;stroke:#c58b4f;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+      .dim{fill:none;stroke:#9d9389;stroke-width:1.6;stroke-dasharray:6 6}
+      .panel{fill:rgba(255,255,255,.68);stroke:#eadfce;stroke-width:2}
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1600" height="1000" fill="url(#grid)" opacity=".45"/>
+
+  <text x="70" y="82" class="title">宠物行为监测清洁机器人  V2 设计图</text>
+  <text x="72" y="120" class="subtitle">圆润宠物友好机身 · 侧向行为干预触臂 · 四点减震支腿 · 低噪履带清洁底盘 · 顶部投放/储物开口</text>
+
+  <rect x="70" y="160" width="470" height="650" rx="28" class="panel"/>
+  <rect x="565" y="160" width="470" height="650" rx="28" class="panel"/>
+  <rect x="1060" y="160" width="470" height="650" rx="28" class="panel"/>
+
+  <text x="96" y="206" class="view-title">正视图 Front</text>
+  <text x="590" y="206" class="view-title">侧视图 Side</text>
+  <text x="1088" y="206" class="view-title">俯视图 Top</text>
+
+  <!-- Front view -->
+  <g transform="translate(80,170)" filter="url(#shadow)">
+    <path d="M155 215
+      C145 120 210 72 282 70
+      C348 72 417 122 407 216
+      C400 292 342 333 282 334
+      C218 333 163 294 155 215Z" fill="url(#shell)"/>
+    <path d="M185 192 C167 118 198 76 246 58 C221 118 213 161 230 205Z" fill="#f5f2ef"/>
+    <path d="M378 192 C396 118 365 76 317 58 C342 118 350 161 333 205Z" fill="#f5f2ef"/>
+    <path d="M240 94 C268 72 302 72 330 94" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round"/>
+    <ellipse cx="240" cy="196" rx="16" ry="12" fill="#9eb5c1"/>
+    <ellipse cx="326" cy="196" rx="16" ry="12" fill="#9eb5c1"/>
+    <circle cx="236" cy="191" r="4" fill="#ffffff" opacity=".85"/>
+    <circle cx="322" cy="191" r="4" fill="#ffffff" opacity=".85"/>
+
+    <g transform="translate(130,202)">
+      <rect x="-92" y="-8" width="95" height="10" rx="5" fill="url(#metal)"/>
+      <rect x="-132" y="-18" width="30" height="34" rx="6" fill="#f7f7f7"/>
+      <circle cx="-8" cy="-3" r="9" fill="#e8d5df"/>
+      <path d="M-74 -3 l18 -9 m-8 9 l20 8" stroke="#c5c9ce" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(434,202)">
+      <rect x="-4" y="-8" width="95" height="10" rx="5" fill="url(#metal)"/>
+      <rect x="100" y="-18" width="30" height="34" rx="6" fill="#f7f7f7"/>
+      <path d="M32 -3 l18 -9 m-8 9 l20 8" stroke="#c5c9ce" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <g>
+      <rect x="206" y="318" width="18" height="96" rx="9" fill="url(#metal)"/>
+      <rect x="340" y="318" width="18" height="96" rx="9" fill="url(#metal)"/>
+      <rect x="196" y="418" width="82" height="74" rx="13" fill="url(#track)"/>
+      <rect x="286" y="418" width="82" height="74" rx="13" fill="url(#track)"/>
+      <rect x="204" y="410" width="62" height="18" rx="5" fill="#f6f5f2"/>
+      <rect x="296" y="410" width="62" height="18" rx="5" fill="#f6f5f2"/>
+    </g>
+  </g>
+
+  <!-- Side view -->
+  <g transform="translate(580,170)" filter="url(#shadow)">
+    <path d="M120 218
+      C120 138 184 78 284 78
+      C365 78 416 137 416 215
+      C416 298 350 336 242 336
+      C162 336 120 292 120 218Z" fill="url(#shell)"/>
+    <path d="M154 198 C150 150 184 112 232 96 C194 142 186 198 196 262 C170 253 154 232 154 198Z" fill="#f6f3ef"/>
+    <ellipse cx="158" cy="196" rx="10" ry="14" fill="#9eb5c1"/>
+    <rect x="410" y="205" width="32" height="32" rx="7" fill="#ffffff"/>
+    <rect x="230" y="335" width="22" height="104" rx="10" fill="url(#metal)"/>
+    <rect x="344" y="335" width="22" height="104" rx="10" fill="url(#metal)"/>
+    <rect x="105" y="438" width="345" height="70" rx="26" fill="url(#track)"/>
+    <rect x="122" y="452" width="309" height="24" rx="12" fill="#f7f7f5"/>
+    <ellipse cx="156" cy="505" rx="25" ry="10" fill="#3a3d42" opacity=".65"/>
+    <ellipse cx="397" cy="505" rx="25" ry="10" fill="#3a3d42" opacity=".65"/>
+  </g>
+
+  <!-- Top view -->
+  <g transform="translate(1070,170)" filter="url(#shadow)">
+    <ellipse cx="235" cy="230" rx="180" ry="116" fill="url(#shell)"/>
+    <ellipse cx="235" cy="230" rx="82" ry="48" fill="#ebe8e4"/>
+    <path d="M170 208 C198 170 272 170 300 208" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round"/>
+    <path d="M172 239 C195 269 275 270 300 239" fill="#ddd9d4"/>
+    <ellipse cx="155" cy="314" rx="13" ry="9" fill="#9eb5c1"/>
+    <ellipse cx="314" cy="314" rx="13" ry="9" fill="#9eb5c1"/>
+    <rect x="72" y="336" width="62" height="34" rx="8" fill="url(#track)"/>
+    <rect x="336" y="336" width="62" height="34" rx="8" fill="url(#track)"/>
+    <g transform="translate(48,220)">
+      <rect x="-5" y="-5" width="110" height="10" rx="5" fill="url(#metal)" transform="rotate(-14)"/>
+      <rect x="-42" y="-19" width="30" height="34" rx="6" fill="#f7f7f7" transform="rotate(-14)"/>
+      <circle cx="86" cy="-5" r="11" fill="#e8d5df"/>
+    </g>
+    <g transform="translate(426,220)">
+      <rect x="-106" y="-5" width="110" height="10" rx="5" fill="url(#metal)" transform="rotate(14)"/>
+      <rect x="16" y="-19" width="30" height="34" rx="6" fill="#f7f7f7" transform="rotate(14)"/>
+    </g>
+  </g>
+
+  <!-- Callouts -->
+  <g>
+    <path class="callout" d="M360 254 L470 206"/>
+    <text x="478" y="207" class="label">顶部开口</text>
+    <text x="478" y="230" class="note">可放诱导零食/传感模块</text>
+
+    <path class="callout" d="M235 385 L128 433"/>
+    <text x="92" y="464" class="label">柔和视觉识别眼</text>
+    <text x="92" y="487" class="note">低压迫感，适合宠物场景</text>
+
+    <path class="callout" d="M195 580 L105 624"/>
+    <text x="94" y="654" class="label">侧向干预触臂</text>
+    <text x="94" y="677" class="note">用于轻推、提示或引导宠物</text>
+
+    <path class="callout" d="M800 625 L920 666"/>
+    <text x="927" y="671" class="label">低噪履带底盘</text>
+    <text x="927" y="694" class="note">增强稳定性，适合室内地面</text>
+
+    <path class="callout" d="M1285 505 L1430 555"/>
+    <text x="1245" y="842" class="label">俯视结构</text>
+    <text x="1245" y="865" class="note">椭圆机身降低碰撞风险</text>
+  </g>
+
+  <!-- Spec cards -->
+  <g>
+    <rect x="70" y="850" width="330" height="95" rx="18" fill="#ffffff" opacity=".75" stroke="#eadfce"/>
+    <text x="95" y="885" class="label">外观语言</text>
+    <text x="95" y="915" class="note">圆润、低攻击性、宠物友好、白色家电风</text>
+
+    <rect x="430" y="850" width="330" height="95" rx="18" fill="#ffffff" opacity=".75" stroke="#eadfce"/>
+    <text x="455" y="885" class="label">功能定位</text>
+    <text x="455" y="915" class="note">行为监测 + 异常提示 + 粪便/毛发清理</text>
+
+    <rect x="790" y="850" width="330" height="95" rx="18" fill="#ffffff" opacity=".75" stroke="#eadfce"/>
+    <text x="815" y="885" class="label">交互结构</text>
+    <text x="815" y="915" class="note">顶部开口、前置视觉、侧边触臂、四点支撑</text>
+
+    <rect x="1150" y="850" width="330" height="95" rx="18" fill="#ffffff" opacity=".75" stroke="#eadfce"/>
+    <text x="1175" y="885" class="label">建议材质</text>
+    <text x="1175" y="915" class="note">哑光 ABS 外壳、金属伸缩杆、橡胶履带</text>
+  </g>
+</svg>
